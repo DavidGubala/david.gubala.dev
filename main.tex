@@ -1,0 +1,113 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{mathptmx}  % Times font
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.25in}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+
+\titleformat{\section}{\bfseries\large\raggedright}{}{0em}{}[\color{gray}\titlerule]
+
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+\newcommand{\resumeExpSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2} \\
+      \textit{#3} & {\small #4}
+    \end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeProjectHeading}[4]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      #3 & \small #4
+    \end{tabular*}\vspace{-2pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={},noitemsep,nolistsep]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[noitemsep,topsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{David Gubala}}\\[4pt]
+    \textit{Lead Software Developer – .NET / JavaScript / AI Solutions}\\[6pt]
+    \normalsize
+    \textbf{Phone:} 708.351.3557 \quad
+    \textbf{Email:} \href{mailto:gubaladev@gmail.com}{gubaladev@gmail.com} \\
+    \textbf{GitHub:} \href{https://github.com/davidgubala}{github.com/davidgubala} \quad
+    \textbf{LinkedIn:} \href{https://linkedin.com/in/gubala}{linkedin.com/in/gubala}
+\end{center}
+
+\section{Professional Summary}
+Lead Software Developer with 5+ years building enterprise and cloud-native applications using C\#, .NET Core, Angular, and React. Academic and practical experience with AI/ML, including a Kickstarter prediction model with 82\% accuracy. Passionate about simulation, optimization, and intelligent engineering tools.
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeExpSubheading{Redmane Technology}{2021 -- Present}{Lead Software Developer}{Chicago, IL}
+\resumeItemListStart
+\resumeItem{Led development of ASP.NET + AngularJS platform handling 100K+ docs with 99.99\% uptime.}
+\resumeItem{Increased sprint velocity 30\% and eliminated UAT bugs via CI, automation, and agile mentoring.}
+\resumeItem{Optimized CMS architecture for multi-tenant systems as Umbraco Certified Professional.}
+\resumeItemListEnd
+
+\resumeExpSubheading{Elevator Media}{2020}{Junior Full Stack Developer}{Chicago, IL}
+\resumeItemListStart
+\resumeItem{Built NestJS APIs for automated social media publishing, improving reach by 20\%.}
+\resumeItem{Packaged internal tools into NPM modules to standardize dev workflows.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{Kickstarter Prediction Model}{2021}{Python, Scikit-learn, Pandas, Jupyter}{}
+\resumeItemListStart
+\resumeItem{Built ML model to predict campaign success using NLP and structured metadata.}
+\resumeItem{Achieved 82\% accuracy; demonstrated end-to-end pipeline in AI graduate course.}
+\resumeItemListEnd
+
+\vspace{4pt}
+\resumeProjectHeading{SoundClip}{2021}{React Native, Supabase, PostgreSQL}{}
+\resumeItemListStart
+\resumeItem{Developed mobile audio-sharing app with user profiles, feeds, and real-time sync.}
+\resumeItemListEnd
+
+\vspace{4pt}
+\resumeProjectHeading{Can I Ride My Motorcycle?}{2024}{Node.js, OpenWeatherMap API}{}
+\resumeItemListStart
+\resumeItem{Web app scoring motorcycle ride safety using weather data like wind and rain.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\textbf{Languages:} C\#, JavaScript, Python, SQL, TypeScript \\
+\textbf{Frameworks:} .NET Core, React, React Native, NestJS, AngularJS, PyTorch, Scikit-learn \\
+\textbf{Cloud/DevOps:} Docker, GitHub Actions, Azure, AWS, GCP \\
+\textbf{Tools:} Git, Postman, Jupyter, Formio \\
+\textbf{Databases:} PostgreSQL, MongoDB, SQL Server
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeExpSubheading{Loyola University Chicago}{2020 -- 2021}{M.S. in Computer Science (GPA: 3.9)}{Chicago, IL}
+\resumeExpSubheading{Loyola University Chicago}{2016 -- 2020}{B.S. in Computer Science}{Chicago, IL}
+\resumeSubHeadingListEnd
+
+\end{document}

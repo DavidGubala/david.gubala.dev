@@ -4,11 +4,47 @@
     --gray-light: #F5F5F5;
     --gray-medium: #E0E0E0;
     --gray-dark: #666666;
+    --hover-bg: #FFFFFF;
     --spacing-xs: 8px;
     --spacing-sm: 16px;
     --spacing-md: 24px;
     --spacing-lg: 48px;
     --spacing-xl: 64px;
+}
+
+[data-theme="dark"] {
+    --black: #f0f0f0;
+    --white: #121212;
+    --gray-light: #1e1e1e;
+    --gray-medium: #333333;
+    --gray-dark: #a0a0a0;
+    --hover-bg: #2c2c2c;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--gray-light);
+    border: 2px solid var(--black);
+    color: var(--black);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 * {
@@ -138,7 +174,7 @@ article {
 }
 
 .col:hover {
-    background-color: var(--white);
+    background-color: var(--hover-bg);
     border-left-width: 5px;
     transform: translateX(2px);
 }
@@ -191,11 +227,35 @@ a:hover::after {
     transform-origin: bottom left;
 }
 
-/* World icon styling */
-a p {
-    font-size: 1.25rem;
-    margin: 0;
+/* Icons */
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
+
+.theme-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--black);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+}
+
+.sun-icon { display: none; }
+.moon-icon { display: block; }
+
+[data-theme="dark"] .sun-icon { display: block; }
+[data-theme="dark"] .moon-icon { display: none; }
+[data-theme="dark"] .theme-icon { stroke: var(--black); } /* Button text color is black */
+
 
 /* Technology tags */
 .tech-tags {
@@ -223,7 +283,7 @@ a p {
 }
 
 .skill-tag:hover {
-    background-color: var(--white);
+    background-color: var(--hover-bg);
     border-color: var(--black);
     transform: translateY(-1px);
 }
@@ -242,6 +302,104 @@ a p {
 #contact a:hover {
     background-color: var(--black);
     color: var(--white);
+}
+
+/* Typography utility classes */
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-dark);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-muted {
+    color: var(--gray-dark);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-lg {
+    font-size: 1.2em;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.mb-xs {
+    margin-bottom: 0.25rem;
+}
+
+.mb-sm {
+    margin-bottom: 0.5rem;
+}
+
+.mb-md {
+    margin-bottom: 1.5rem;
+}
+
+/* Layout utility classes */
+.lh-relaxed {
+    line-height: 1.6;
+}
+
+.p-xs {
+    padding: 10px;
+}
+
+.pl-sm {
+    padding-left: 1rem;
+}
+
+.border-l-3 {
+    border-left: 3px solid var(--black);
+}
+
+.section-header {
+    margin-bottom: 0.5rem;
+}
+
+.section-subheader {
+    color: var(--gray-dark);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.project-header {
+    border-bottom: 1px solid var(--gray-medium);
+    padding-bottom: 1rem;
+}
+
+.education-card {
+    gap: 1.5rem;
+}
+
+.degree-block {
+    padding-left: 1rem;
+    border-left: 3px solid var(--black);
+}
+
+.degree-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 1.05rem;
+}
+
+/* Accessibility focus styles */
+/* Accessibility focus styles */
+:focus-visible {
+    outline: 3px solid var(--black);
+    outline-offset: 2px;
+}
+
+[data-theme="dark"] :focus-visible {
+    outline-color: var(--white);
 }
 
 @media (max-width: 768px) {
@@ -285,4 +443,5 @@ a p {
         text-align: center;
     }
 }
+
 

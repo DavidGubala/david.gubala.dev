@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="img/favicon.ico" />
     <title>David Gubala - Full-Stack Developer & Technical Architect | Chicago, IL</title>
+    <script>
+      // Immediate theme application to prevent flash
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -33,27 +43,44 @@
     </script>
   </head>
   <body>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+      <svg class="theme-icon moon-icon" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg class="theme-icon sun-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
     <main>
       <article>
         <div class="container">
-          <h1>David Gubala</h1>
-          <p style="font-size: 1.25rem; color: #666; margin-bottom: 2rem; max-width: 600px;">
-            Full-Stack Developer & Technical Architect delivering scalable enterprise solutions 
-            from concept to production
-          </p>
+          <header>
+            <h1>David Gubala</h1>
+            <p class="subtitle">
+              Full-Stack Developer & Technical Architect delivering scalable enterprise solutions 
+              from concept to production
+            </p>
+          </header>
 
-          <div class="item" id="about">
+          <section class="item" id="about">
             <h3>About</h3>
             <div class="props">
-              <img src="img/david.jpg" alt="David Gubala" />
+              <img src="img/david.jpg" alt="David Gubala" width="200" height="200" />
               <div
-                class="pad"
+                class="pad lh-relaxed"
                 id="abtDetails"
-                style="padding: 10px; line-height: 1.6"
               >
-                <p style="font-weight: bold; font-size: 1.2em">David Gubala</p>
+                <p class="text-lg text-bold">David Gubala</p>
                 <p>Chicago, IL</p>
-                <p style="font-style: italic">
+                <p class="text-italic">
                   Software Developer, Architect, and Technical Consultant
                 </p>
                 <p>
@@ -76,41 +103,41 @@
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="item" id="education">
+          <section class="item" id="education">
             <h3>Education</h3>
             <div class="pad">
-              <div class="col" style="gap: 1.5rem;">
-                <div style="border-bottom: 1px solid #E0E0E0; padding-bottom: 1rem;">
-                  <h4 style="margin-bottom: 0.5rem;">Loyola University Chicago</h4>
-                  <p style="color: #666; font-size: 0.875rem; font-style: italic;">Chicago, IL</p>
+              <div class="col education-card">
+                <div class="project-header">
+                  <h4 class="mb-sm">Loyola University Chicago</h4>
+                  <p class="section-subheader">Chicago, IL</p>
                 </div>
                 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                  <div style="padding-left: 1rem; border-left: 3px solid #000;">
-                    <p style="font-weight: 600; margin-bottom: 0.25rem; font-size: 1.05rem;">Master of Science in Computer Science</p>
-                    <p style="color: #666; font-size: 0.875rem;">2020-2021 • GPA: 3.9</p>
+                  <div class="degree-block">
+                    <p class="degree-title">Master of Science in Computer Science</p>
+                    <p class="text-sm text-muted">2020-2021 • GPA: 3.9</p>
                   </div>
 
-                  <div style="padding-left: 1rem; border-left: 3px solid #000;">
-                    <p style="font-weight: 600; margin-bottom: 0.25rem; font-size: 1.05rem;">Bachelor of Science in Computer Science</p>
-                    <p style="color: #666; font-size: 0.875rem;">2016-2020 • Cum Laude</p>
+                  <div class="degree-block">
+                    <p class="degree-title">Bachelor of Science in Computer Science</p>
+                    <p class="text-sm text-muted">2016-2020 • Cum Laude</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="item" id="skills">
+          <section class="item" id="skills">
             <h3>Technical Skills</h3>
-            <p style="margin-bottom: 1.5rem; color: #666;">
+            <p class="mb-md text-muted">
               Proficient in modern development technologies with hands-on production experience
             </p>
             
             <div class="pad gap">
               <div class="col">
-                <h4 style="margin-bottom: 0.5rem;">Languages & Core</h4>
+                <h4 class="mb-sm">Languages & Core</h4>
                 <div class="skills-grid">
                   <span class="skill-tag">C#</span>
                   <span class="skill-tag">JavaScript (ES6+)</span>
@@ -126,7 +153,7 @@
               </div>
 
               <div class="col">
-                <h4 style="margin-bottom: 0.5rem;">Frameworks & Libraries</h4>
+                <h4 class="mb-sm">Frameworks & Libraries</h4>
                 <div class="skills-grid">
                   <span class="skill-tag">.NET</span>
                   <span class="skill-tag">ASP.NET</span>
@@ -141,7 +168,7 @@
               </div>
 
               <div class="col">
-                <h4 style="margin-bottom: 0.5rem;">Databases & Caching</h4>
+                <h4 class="mb-sm">Databases & Caching</h4>
                 <div class="skills-grid">
                   <span class="skill-tag">SQL Server</span>
                   <span class="skill-tag">PostgreSQL</span>
@@ -153,7 +180,7 @@
               </div>
 
               <div class="col">
-                <h4 style="margin-bottom: 0.5rem;">Cloud & Infrastructure</h4>
+                <h4 class="mb-sm">Cloud & Infrastructure</h4>
                 <div class="skills-grid">
                   <span class="skill-tag">Azure</span>
                   <span class="skill-tag">AWS</span>
@@ -165,7 +192,7 @@
               </div>
 
               <div class="col">
-                <h4 style="margin-bottom: 0.5rem;">Development Tools & Practices</h4>
+                <h4 class="mb-sm">Development Tools & Practices</h4>
                 <div class="skills-grid">
                   <span class="skill-tag">Git</span>
                   <span class="skill-tag">RESTful APIs</span>
@@ -176,9 +203,9 @@
               </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="item" id="work">
+          <section class="item" id="work">
             <h3>Work</h3>
             <div class="pad gap">
               <div class="col bordersplitter">
@@ -188,7 +215,14 @@
                     href="https://www.redmane.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><p>&#127760;</p></a
+                    aria-label="Visit RedMane Technology website"
+                    >
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </a
                   >
                 </div>
                 <div class="row">
@@ -217,7 +251,14 @@
                     href="https://www.elevatormag.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><p>&#127760;</p></a
+                    aria-label="Visit Elevator Media website"
+                    >
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </a
                   >
                 </div>
                 <div class="row">
@@ -234,11 +275,11 @@
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="item" id="professional-projects">
+          <section class="item" id="professional-projects">
             <h3>Personal Projects</h3>
-            <p style="margin-bottom: 1.5rem; color: #666;">
+            <p class="mb-md text-muted">
               Side projects built to explore new technologies and solve real-world problems
             </p>
             <div class="pad gap">
@@ -249,7 +290,14 @@
                     href="https://mystockwatchlist.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><p>&#127760;</p></a
+                    aria-label="Visit My Stock Watchlist website"
+                    >
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </a
                   >
                 </div>
                 <p>
@@ -275,7 +323,14 @@
                     href="https://caniridemymotorcycle.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><p>&#127760;</p></a
+                    aria-label="Visit Can I Ride My Motorcycle? website"
+                    >
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </a
                   >
                 </div>
                 <p>
@@ -294,18 +349,33 @@
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="item" id="academic-projects">
+          <section class="item" id="academic-projects">
             <h3>Academic Projects</h3>
-            <p style="margin-bottom: 1.5rem; color: #666;">
+            <p class="mb-md text-muted">
               Graduate-level projects completed during Master's program at Loyola University Chicago
             </p>
             <div class="pad gap">
               <div class="col bordersplitter">
                 <div class="row">
+                  <h4>Kickstarter Prediction Model</h4>
+                  <p class="text-sm text-muted" style="margin: 0;">2021</p>
+                </div>
+                <p>
+                  Developed a machine learning model to predict Kickstarter campaign success rates with 82% accuracy. 
+                  Utilized Natural Language Processing (NLP) for sentiment analysis of campaign descriptions and 
+                  analyzed structured metadata. Built as an end-to-end pipeline project for a graduate AI course.
+                </p>
+                <p class="tech-tags">
+                  <strong>Technologies:</strong> Python, Scikit-learn, Pandas, Jupyter, NLP
+                </p>
+              </div>
+
+              <div class="col bordersplitter">
+                <div class="row">
                   <h4>SoundClip</h4>
-                  <p style="color: #666; font-size: 0.875rem; margin: 0;">2021</p>
+                  <p class="text-sm text-muted" style="margin: 0;">2021</p>
                 </div>
                 <p>
                   Cross-platform mobile social media application for recording and sharing audio content. 
@@ -327,7 +397,7 @@
               <div class="col bordersplitter">
                 <div class="row">
                   <h4>Shipper</h4>
-                  <p style="color: #666; font-size: 0.875rem; margin: 0;">2020-2021</p>
+                  <p class="text-sm text-muted" style="margin: 0;">2020-2021</p>
                 </div>
                 <p>
                   Full-stack logistics platform connecting shippers, carriers, and drivers in the 
@@ -346,11 +416,11 @@
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="item" id="contact">
+          <footer class="item" id="contact">
             <h3>Let's Connect</h3>
-            <p style="margin-bottom: 1.5rem; color: #666;">
+            <p class="mb-md text-muted">
               Available for full-time opportunities, contract work, and technical consulting. 
               Let's discuss how I can help deliver your next project.
             </p>
@@ -380,11 +450,28 @@
                 >david@gubala.dev</a
               >
             </div>
-          </div>
+          </footer>
         </div>
       </article>
     </main>
   </body>
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    
+    // Set initial icon handled by CSS
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        // No JS needed for icon toggle
+    }
+
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        // Button content update handled by CSS
+    });
+  </script>
   <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init(
