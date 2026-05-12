@@ -1,486 +1,843 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="David Gubala" />
-    <meta name="description" content="David Gubala - Full-Stack Developer & Technical Architect with 4+ years experience delivering enterprise solutions. Expert in C#, JavaScript, system architecture, and scalable application development. Available for hire in Chicago, IL." />
-    <meta name="keywords" content="David Gubala, software developer, full-stack developer, technical architect, software engineer, C# developer, JavaScript developer, system architecture, technical consultant, enterprise software, healthcare systems, Chicago developer, available for hire, contract developer" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="img/favicon.ico" />
-    <title>David Gubala - Full-Stack Developer & Technical Architect | Chicago, IL</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="David Gubala" />
+        <meta
+            name="description"
+            content="David Gubala - Full-Stack Developer & Technical Architect with 4+ years experience delivering enterprise solutions. Expert in C#, JavaScript, system architecture, and scalable application development. Available for hire in Chicago, IL."
+        />
+        <meta
+            name="keywords"
+            content="David Gubala, software developer, full-stack developer, technical architect, software engineer, C# developer, JavaScript developer, system architecture, technical consultant, enterprise software, healthcare systems, Chicago developer, available for hire, contract developer"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <title>
+            David Gubala - Full-Stack Developer & Technical Architect | Chicago,
+            IL
+        </title>
+        <script>
+            // Immediate theme application to prevent flash
+            (function () {
+                const savedTheme = localStorage.getItem("theme");
+                const prefersDark = window.matchMedia(
+                    "(prefers-color-scheme: dark)",
+                ).matches;
+                if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                }
+            })();
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "David Gubala",
+                "url": "https://david.gubala.dev",
+                "image": "https://david.gubala.dev/img/david.jpg",
+                "jobTitle": "Software Developer, Architect, and Technical Consultant",
+                "description": "Developer who knows how to consult, architect a project, and bring it to life",
+                "knowsAbout": [
+                    "Full-Stack Development",
+                    "System Architecture",
+                    "Technical Consulting",
+                    "C#",
+                    "ASP.NET",
+                    "JavaScript",
+                    "Go",
+                    "PHP",
+                    "Cloud Architecture",
+                    "Healthcare Systems",
+                    "Enterprise Software"
+                ],
+                "alumniOf": {
+                    "@type": "EducationalOrganization",
+                    "name": "Loyola University Chicago"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Chicago",
+                    "addressRegion": "IL",
+                    "addressCountry": "US"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <svg class="theme-icon moon-icon" viewBox="0 0 24 24">
+                <path
+                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path>
+            </svg>
+            <svg class="theme-icon sun-icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#professional-projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a
+                href="https://gubala.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Hub</a
+            >
+        </nav>
+        <main>
+            <article>
+                <div class="container">
+                    <header>
+                        <div class="hero-text">
+                            <h1>David Gubala</h1>
+                            <p class="subtitle">
+                                Full-Stack Developer & Technical Architect
+                                delivering scalable enterprise solutions from
+                                concept to production
+                            </p>
+                        </div>
+                        <img
+                            src="img/david.jpg"
+                            alt="David Gubala"
+                            class="hero-photo"
+                            width="250"
+                            height="250"
+                        />
+                    </header>
+
+                    <section class="item section-reveal" id="about">
+                        <h3>About</h3>
+                        <div class="props">
+                            <div class="pad lh-relaxed" id="abtDetails">
+                                <p class="text-lg text-bold">David Gubala</p>
+                                <p>Chicago, IL</p>
+                                <p class="text-italic">
+                                    Software Developer, Architect, and Technical
+                                    Consultant
+                                </p>
+                                <p>
+                                    <strong>4+ years</strong> architecting and
+                                    delivering enterprise software solutions
+                                    that serve
+                                    <strong>thousands of users</strong> in
+                                    production environments. I bridge the gap
+                                    between business requirements and technical
+                                    implementation, ensuring projects move from
+                                    concept to deployment on time and within
+                                    scope.
+                                </p>
+                                <p>
+                                    <strong>What I deliver:</strong> Scalable
+                                    system architecture, full-stack application
+                                    development, technical consulting, and
+                                    hands-on leadership for complex software
+                                    projects. Proven track record in healthcare
+                                    systems, financial applications, and
+                                    high-traffic web platforms.
+                                </p>
+                                <p>
+                                    <strong>Available for:</strong> Full-time
+                                    positions, contract development, technical
+                                    consulting, and project architecture.
+                                </p>
+                                <p id="quote">Coffee and HackerNews addict.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="item section-reveal" id="education">
+                        <h3>Education</h3>
+                        <div class="pad">
+                            <div class="col education-card">
+                                <div class="project-header">
+                                    <h4 class="mb-sm">
+                                        Loyola University Chicago
+                                    </h4>
+                                    <p class="section-subheader">Chicago, IL</p>
+                                </div>
+
+                                <div
+                                    style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 1.5rem;
+                                    "
+                                >
+                                    <div class="degree-block">
+                                        <p class="degree-title">
+                                            Master of Science in Computer
+                                            Science
+                                        </p>
+                                        <p class="text-sm text-muted">
+                                            2020-2021 • GPA: 3.9
+                                        </p>
+                                    </div>
+
+                                    <div class="degree-block">
+                                        <p class="degree-title">
+                                            Bachelor of Science in Computer
+                                            Science
+                                        </p>
+                                        <p class="text-sm text-muted">
+                                            2016-2020 • Cum Laude
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="item section-reveal" id="skills">
+                        <h3>Technical Skills</h3>
+                        <p class="mb-md text-muted">
+                            Proficient in modern development technologies with
+                            hands-on production experience
+                        </p>
+
+                        <div class="pad gap">
+                            <div class="col">
+                                <h4 class="mb-sm">Languages & Core</h4>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">C#</span>
+                                    <span class="skill-tag"
+                                        >JavaScript (ES6+)</span
+                                    >
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Go</span>
+                                    <span class="skill-tag">PHP</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="mb-sm">Frameworks & Libraries</h4>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">.NET</span>
+                                    <span class="skill-tag">ASP.NET</span>
+                                    <span class="skill-tag">ASP.NET Core</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">NestJS</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">React Native</span>
+                                    <span class="skill-tag">AngularJS</span>
+                                    <span class="skill-tag">Tailwind CSS</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="mb-sm">Databases & Caching</h4>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">SQL Server</span>
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">IndexedDB</span>
+                                    <span class="skill-tag">LocalStorage</span>
+                                    <span class="skill-tag">Redis</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="mb-sm">Cloud & Infrastructure</h4>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">Azure</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">GCP</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag"
+                                        >GitHub Actions</span
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <h4 class="mb-sm">
+                                    Development Tools & Practices
+                                </h4>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">RESTful APIs</span>
+                                    <span class="skill-tag">Agile/Scrum</span>
+                                    <span class="skill-tag"
+                                        >System Architecture</span
+                                    >
+                                    <span class="skill-tag"
+                                        >Technical Documentation</span
+                                    >
+                                    <span class="skill-tag">Code Review</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="item section-reveal" id="work">
+                        <h3>Work</h3>
+                        <div class="pad gap">
+                            <div class="col bordersplitter">
+                                <div class="row">
+                                    <h4>RedMane Technology</h4>
+                                    <a
+                                        href="https://www.redmane.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Visit RedMane Technology website"
+                                    >
+                                        <svg class="icon" viewBox="0 0 24 24">
+                                            <circle
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                            ></circle>
+                                            <line
+                                                x1="2"
+                                                y1="12"
+                                                x2="22"
+                                                y2="12"
+                                            ></line>
+                                            <path
+                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        Software Developer & Technical
+                                        Consultant
+                                    </p>
+                                    <p>2021-present</p>
+                                </div>
+                                <p>
+                                    <strong
+                                        >Delivering enterprise healthcare
+                                        solutions</strong
+                                    >
+                                    serving thousands of users across multiple
+                                    state agencies. Lead technical architecture
+                                    decisions, full-stack development, and
+                                    system optimization for mission-critical
+                                    healthcare management platforms.
+                                </p>
+                                <p>
+                                    <strong>Key Impact:</strong> Architected
+                                    scalable features reducing system processing
+                                    time by 40%; collaborated with
+                                    cross-functional teams to deliver complex
+                                    workflows on schedule; provided technical
+                                    consulting to stakeholders for strategic
+                                    planning.
+                                </p>
+                                <p class="tech-tags">
+                                    <strong>Technologies:</strong> C#, ASP.NET,
+                                    AngularJS, SQL Server, Azure
+                                </p>
+                            </div>
+
+                            <div class="col bordersplitter">
+                                <div class="row">
+                                    <h4>Elevator Media</h4>
+                                    <a
+                                        href="https://www.elevatormag.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Visit Elevator Media website"
+                                    >
+                                        <svg class="icon" viewBox="0 0 24 24">
+                                            <circle
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                            ></circle>
+                                            <line
+                                                x1="2"
+                                                y1="12"
+                                                x2="22"
+                                                y2="12"
+                                            ></line>
+                                            <path
+                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <p>Junior Full Stack Developer</p>
+                                    <p>2020</p>
+                                </div>
+                                <p>
+                                    Developed and deployed new platform modules
+                                    using TypeScript and NestJS, enhancing the
+                                    existing media management system.
+                                    Collaborated with senior developers to
+                                    implement RESTful APIs and improve
+                                    application performance.
+                                </p>
+                                <p class="tech-tags">
+                                    <strong>Technologies:</strong> TypeScript,
+                                    JavaScript, Node.js, NestJS, RESTful APIs
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section
+                        class="item section-reveal"
+                        id="professional-projects"
+                    >
+                        <h3>Personal Projects</h3>
+                        <p class="mb-md text-muted">
+                            Side projects built to explore new technologies and
+                            solve real-world problems
+                        </p>
+                        <div class="pad gap">
+                            <div class="col bordersplitter">
+                                <div class="row">
+                                    <h4>My Stock Watchlist</h4>
+                                    <a
+                                        href="https://mystockwatchlist.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Visit My Stock Watchlist website"
+                                    >
+                                        <svg class="icon" viewBox="0 0 24 24">
+                                            <circle
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                            ></circle>
+                                            <line
+                                                x1="2"
+                                                y1="12"
+                                                x2="22"
+                                                y2="12"
+                                            ></line>
+                                            <path
+                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p>
+                                    A stock market tracking application built
+                                    with vanilla JavaScript. Users can create
+                                    multiple watchlists, search across 50k+
+                                    securities, and view real-time price data
+                                    from multiple financial APIs. Serves around
+                                    200 daily users with fast load times.
+                                </p>
+                                <p>
+                                    <strong>Key Features:</strong>
+                                    Multi-watchlist support with drag-and-drop
+                                    organization; fuzzy search engine;
+                                    multi-provider API system (Finnhub,
+                                    Polygon.io, CoinGecko) with automatic
+                                    failover; LRU caching strategy; offline
+                                    functionality using IndexedDB.
+                                </p>
+                                <p class="tech-tags">
+                                    <strong>Technologies:</strong> JavaScript
+                                    ES6+, CSS3, IndexedDB, LocalStorage, RESTful
+                                    APIs, Multi-API Architecture
+                                </p>
+                            </div>
+
+                            <div class="col bordersplitter">
+                                <div class="row">
+                                    <h4>Can I Ride My Motorcycle?</h4>
+                                    <a
+                                        href="https://caniridemymotorcycle.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Visit Can I Ride My Motorcycle? website"
+                                    >
+                                        <svg class="icon" viewBox="0 0 24 24">
+                                            <circle
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                            ></circle>
+                                            <line
+                                                x1="2"
+                                                y1="12"
+                                                x2="22"
+                                                y2="12"
+                                            ></line>
+                                            <path
+                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p>
+                                    A weather-focused web app that helps
+                                    motorcycle riders determine if conditions
+                                    are safe for riding. Analyzes temperature,
+                                    precipitation, wind speed, and road
+                                    conditions to provide safety
+                                    recommendations. Built as a learning project
+                                    to work with weather APIs and geolocation.
+                                </p>
+                                <p>
+                                    <strong>Key Features:</strong> Custom safety
+                                    scoring algorithm using the Beaufort Wind
+                                    Scale; automatic location detection with
+                                    manual search fallback; 3-hour, daily, and
+                                    weekly forecasts; dark/light theme; secure
+                                    deployment using GitHub Actions with
+                                    encrypted API keys.
+                                </p>
+                                <p class="tech-tags">
+                                    <strong>Technologies:</strong> JavaScript
+                                    ES6+, CSS3, Geolocation API, Open-Meteo
+                                    Weather API, OpenWeatherMap Geocoding,
+                                    GitHub Actions, CI/CD
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="item section-reveal" id="academic-projects">
+                        <h3>Academic Projects</h3>
+                        <p class="mb-md text-muted">
+                            Graduate-level projects completed during Master's
+                            program at Loyola University Chicago
+                        </p>
+                        <div class="pad gap">
+                            <div class="col bordersplitter">
+                                <div class="row">
+                                    <h4>Kickstarter Prediction Model</h4>
+                                    <p
+                                        class="text-sm text-muted"
+                                        style="margin: 0"
+                                    >
+                                        2021
+                                    </p>
+                                </div>
+                                <p>
+                                    Developed a machine learning model to
+                                    predict Kickstarter campaign success rates
+                                    with 82% accuracy. Utilized Natural Language
+                                    Processing (NLP) for sentiment analysis of
+                                    campaign descriptions and analyzed
+                                    structured metadata. Built as an end-to-end
+                                    pipeline project for a graduate AI course.
+                                </p>
+                                <p class="tech-tags">
+                                    <strong>Technologies:</strong> Python,
+                                    Scikit-learn, Pandas, Jupyter, NLP
+                                </p>
+                            </div>
+
+                            <div class="col bordersplitter">
+                                <div class="row">
+                                    <h4>SoundClip</h4>
+                                    <p
+                                        class="text-sm text-muted"
+                                        style="margin: 0"
+                                    >
+                                        2021
+                                    </p>
+                                </div>
+                                <p>
+                                    Cross-platform mobile social media
+                                    application for recording and sharing audio
+                                    content. Built as a capstone project
+                                    exploring audio streaming, real-time
+                                    updates, and mobile development best
+                                    practices. Implemented user authentication,
+                                    cloud storage integration, and a feed-based
+                                    interface for discovering and sharing audio
+                                    clips.
+                                </p>
+                                <p>
+                                    <strong>Key Features:</strong> Audio
+                                    recording with real-time waveform
+                                    visualization; user profiles and follower
+                                    system; feed algorithm for content
+                                    discovery; cloud-based audio storage; push
+                                    notifications for engagement; offline
+                                    playback support.
+                                </p>
+                                <p class="tech-tags">
+                                    <strong>Technologies:</strong> React Native,
+                                    JavaScript, Node.js, Express, MongoDB, AWS
+                                    S3, Firebase Authentication, REST APIs
+                                </p>
+                            </div>
+
+                            <div class="col bordersplitter">
+                                <div class="row">
+                                    <h4>Shipper</h4>
+                                    <p
+                                        class="text-sm text-muted"
+                                        style="margin: 0"
+                                    >
+                                        2020-2021
+                                    </p>
+                                </div>
+                                <p>
+                                    Full-stack logistics platform connecting
+                                    shippers, carriers, and drivers in the
+                                    trucking industry. Designed to streamline
+                                    freight matching and reduce empty miles
+                                    through intelligent route optimization.
+                                    Featured separate interfaces for each user
+                                    type with real-time tracking, bidding
+                                    system, and automated dispatch workflows.
+                                </p>
+                                <p>
+                                    <strong>Key Features:</strong> Multi-role
+                                    authentication system; real-time shipment
+                                    tracking; automated freight matching
+                                    algorithm; bidding and negotiation system;
+                                    route optimization; document management;
+                                    mobile-responsive dashboard for drivers.
+                                </p>
+                                <p class="tech-tags">
+                                    <strong>Technologies:</strong> JavaScript,
+                                    Node.js, Express, MongoDB, Socket.io, HTML5,
+                                    CSS3, Google Maps API, RESTful APIs
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer class="item section-reveal" id="contact">
+                        <h3>Let's Connect</h3>
+                        <p class="mb-md text-muted">
+                            Available for full-time opportunities, contract
+                            work, and technical consulting. Let's discuss how I
+                            can help deliver your next project.
+                        </p>
+                        <div class="contact-grid">
+                            <a
+                                href="https://github.com/davidgubala"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                            >
+                                <svg
+                                    class="icon"
+                                    style="width: 16px; height: 16px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                                    ></path>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/gubala/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <svg
+                                    class="icon"
+                                    style="width: 16px; height: 16px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                    ></path>
+                                    <rect
+                                        x="2"
+                                        y="9"
+                                        width="4"
+                                        height="12"
+                                    ></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a
+                                href="https://twitter.com/gubaladavid"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Twitter"
+                            >
+                                <svg
+                                    class="icon"
+                                    style="width: 16px; height: 16px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                    ></path>
+                                </svg>
+                                Twitter
+                            </a>
+                            <a
+                                href="mailto:david@gubala.dev"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Email"
+                            >
+                                <svg
+                                    class="icon"
+                                    style="width: 16px; height: 16px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    ></path>
+                                    <polyline
+                                        points="22,6 12,13 2,6"
+                                    ></polyline>
+                                </svg>
+                                Email
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+        </main>
+    </body>
     <script>
-      // Immediate theme application to prevent flash
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          document.documentElement.setAttribute('data-theme', 'dark');
+        const toggleButton = document.getElementById("theme-toggle");
+
+        // Set initial icon handled by CSS
+        if (document.documentElement.getAttribute("data-theme") === "dark") {
+            // No JS needed for icon toggle
         }
-      })();
+
+        toggleButton.addEventListener("click", () => {
+            const currentTheme =
+                document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            // Button content update handled by CSS
+        });
+
+        // Scroll-triggered section reveals
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+        );
+
+        document.querySelectorAll(".section-reveal").forEach((section) => {
+            revealObserver.observe(section);
+        });
     </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "David Gubala",
-        "url": "https://david.gubala.dev",
-        "image": "https://david.gubala.dev/img/david.jpg",
-        "jobTitle": "Software Developer, Architect, and Technical Consultant",
-        "description": "Developer who knows how to consult, architect a project, and bring it to life",
-        "knowsAbout": ["Full-Stack Development", "System Architecture", "Technical Consulting", "C#", "ASP.NET", "JavaScript", "Go", "PHP", "Cloud Architecture", "Healthcare Systems", "Enterprise Software"],
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Loyola University Chicago"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chicago",
-          "addressRegion": "IL",
-          "addressCountry": "US"
-        }
-      }
+    <script>
+        !(function (t, e) {
+            var o, n, p, r;
+            e.__SV ||
+                ((window.posthog = e),
+                (e._i = []),
+                (e.init = function (i, s, a) {
+                    function g(t, e) {
+                        var o = e.split(".");
+                        (2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                            (t[e] = function () {
+                                t.push(
+                                    [e].concat(
+                                        Array.prototype.slice.call(
+                                            arguments,
+                                            0,
+                                        ),
+                                    ),
+                                );
+                            }));
+                    }
+                    (((p = t.createElement("script")).type = "text/javascript"),
+                        (p.crossOrigin = "anonymous"),
+                        (p.async = !0),
+                        (p.src =
+                            s.api_host.replace(
+                                ".i.posthog.com",
+                                "-assets.i.posthog.com",
+                            ) + "/static/array.js"),
+                        (r =
+                            t.getElementsByTagName(
+                                "script",
+                            )[0]).parentNode.insertBefore(p, r));
+                    var u = e;
+                    for (
+                        void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                            u.people = u.people || [],
+                            u.toString = function (t) {
+                                var e = "posthog";
+                                return (
+                                    "posthog" !== a && (e += "." + a),
+                                    t || (e += " (stub)"),
+                                    e
+                                );
+                            },
+                            u.people.toString = function () {
+                                return u.toString(1) + ".people (stub)";
+                            },
+                            o =
+                                "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(
+                                    " ",
+                                ),
+                            n = 0;
+                        n < o.length;
+                        n++
+                    )
+                        g(u, o[n]);
+                    e._i.push([i, s, a]);
+                }),
+                (e.__SV = 1));
+        })(document, window.posthog || []);
+        posthog.init("phc_wANjAdyr8WJ4zSb3Zb81QqY3nihbZggi2J2KLsW2VRy", {
+            api_host: "https://us.i.posthog.com",
+            autocapture: true,
+            capture_pageview: true,
+            capture_pageleave: true,
+        });
+        posthog.capture("david.gubala.dev: visited");
     </script>
-  </head>
-  <body>
-    <button id="theme-toggle" aria-label="Toggle Dark Mode">
-      <svg class="theme-icon moon-icon" viewBox="0 0 24 24">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-      <svg class="theme-icon sun-icon" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
-    <main>
-      <article>
-        <div class="container">
-          <header>
-            <h1>David Gubala</h1>
-            <p class="subtitle">
-              Full-Stack Developer & Technical Architect delivering scalable enterprise solutions 
-              from concept to production
-            </p>
-          </header>
-
-          <section class="item" id="about">
-            <h3>About</h3>
-            <div class="props">
-              <img src="img/david.jpg" alt="David Gubala" width="200" height="200" />
-              <div
-                class="pad lh-relaxed"
-                id="abtDetails"
-              >
-                <p class="text-lg text-bold">David Gubala</p>
-                <p>Chicago, IL</p>
-                <p class="text-italic">
-                  Software Developer, Architect, and Technical Consultant
-                </p>
-                <p>
-                  <strong>4+ years</strong> architecting and delivering enterprise software solutions 
-                  that serve <strong>thousands of users</strong> in production environments. I bridge 
-                  the gap between business requirements and technical implementation, ensuring projects 
-                  move from concept to deployment on time and within scope.
-                </p>
-                <p>
-                  <strong>What I deliver:</strong> Scalable system architecture, full-stack application 
-                  development, technical consulting, and hands-on leadership for complex software projects. 
-                  Proven track record in healthcare systems, financial applications, and high-traffic web platforms.
-                </p>
-                <p>
-                  <strong>Available for:</strong> Full-time positions, contract development, technical 
-                  consulting, and project architecture.
-                </p>
-                <p id="quote">
-                  Coffee and HackerNews addict.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="item" id="education">
-            <h3>Education</h3>
-            <div class="pad">
-              <div class="col education-card">
-                <div class="project-header">
-                  <h4 class="mb-sm">Loyola University Chicago</h4>
-                  <p class="section-subheader">Chicago, IL</p>
-                </div>
-                
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                  <div class="degree-block">
-                    <p class="degree-title">Master of Science in Computer Science</p>
-                    <p class="text-sm text-muted">2020-2021 • GPA: 3.9</p>
-                  </div>
-
-                  <div class="degree-block">
-                    <p class="degree-title">Bachelor of Science in Computer Science</p>
-                    <p class="text-sm text-muted">2016-2020 • Cum Laude</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="item" id="skills">
-            <h3>Technical Skills</h3>
-            <p class="mb-md text-muted">
-              Proficient in modern development technologies with hands-on production experience
-            </p>
-            
-            <div class="pad gap">
-              <div class="col">
-                <h4 class="mb-sm">Languages & Core</h4>
-                <div class="skills-grid">
-                  <span class="skill-tag">C#</span>
-                  <span class="skill-tag">JavaScript (ES6+)</span>
-                  <span class="skill-tag">TypeScript</span>
-                  <span class="skill-tag">Go</span>
-                  <span class="skill-tag">PHP</span>
-                  <span class="skill-tag">Python</span>
-                  <span class="skill-tag">Java</span>
-                  <span class="skill-tag">C++</span>
-                  <span class="skill-tag">HTML5</span>
-                  <span class="skill-tag">CSS3</span>
-              </div>
-              </div>
-
-              <div class="col">
-                <h4 class="mb-sm">Frameworks & Libraries</h4>
-                <div class="skills-grid">
-                  <span class="skill-tag">.NET</span>
-                  <span class="skill-tag">ASP.NET</span>
-                  <span class="skill-tag">ASP.NET Core</span>
-                  <span class="skill-tag">Node.js</span>
-                  <span class="skill-tag">NestJS</span>
-                  <span class="skill-tag">React</span>
-                  <span class="skill-tag">React Native</span>
-                  <span class="skill-tag">AngularJS</span>
-                  <span class="skill-tag">Tailwind CSS</span>
-              </div>
-              </div>
-
-              <div class="col">
-                <h4 class="mb-sm">Databases & Caching</h4>
-                <div class="skills-grid">
-                  <span class="skill-tag">SQL Server</span>
-                  <span class="skill-tag">PostgreSQL</span>
-                  <span class="skill-tag">MySQL</span>
-                  <span class="skill-tag">IndexedDB</span>
-                  <span class="skill-tag">LocalStorage</span>
-                  <span class="skill-tag">Redis</span>
-              </div>
-              </div>
-
-              <div class="col">
-                <h4 class="mb-sm">Cloud & Infrastructure</h4>
-                <div class="skills-grid">
-                  <span class="skill-tag">Azure</span>
-                  <span class="skill-tag">AWS</span>
-                  <span class="skill-tag">GCP</span>
-                  <span class="skill-tag">Docker</span>
-                  <span class="skill-tag">CI/CD</span>
-                  <span class="skill-tag">GitHub Actions</span>
-              </div>
-              </div>
-
-              <div class="col">
-                <h4 class="mb-sm">Development Tools & Practices</h4>
-                <div class="skills-grid">
-                  <span class="skill-tag">Git</span>
-                  <span class="skill-tag">RESTful APIs</span>
-                  <span class="skill-tag">Agile/Scrum</span>
-                  <span class="skill-tag">System Architecture</span>
-                  <span class="skill-tag">Technical Documentation</span>
-                  <span class="skill-tag">Code Review</span>
-              </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="item" id="work">
-            <h3>Work</h3>
-            <div class="pad gap">
-              <div class="col bordersplitter">
-                <div class="row">
-                  <h4>RedMane Technology</h4>
-                  <a
-                    href="https://www.redmane.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit RedMane Technology website"
-                    >
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                  </a
-                  >
-                </div>
-                <div class="row">
-                  <p>Software Developer & Technical Consultant</p>
-                  <p>2021-present</p>
-                </div>
-                <p>
-                  <strong>Delivering enterprise healthcare solutions</strong> serving thousands of users 
-                  across multiple state agencies. Lead technical architecture decisions, full-stack 
-                  development, and system optimization for mission-critical healthcare management platforms.
-                </p>
-                <p>
-                  <strong>Key Impact:</strong> Architected scalable features reducing system processing 
-                  time by 40%; collaborated with cross-functional teams to deliver complex workflows on 
-                  schedule; provided technical consulting to stakeholders for strategic planning.
-                </p>
-                <p class="tech-tags">
-                  <strong>Technologies:</strong> C#, ASP.NET, AngularJS, SQL Server, Azure
-                </p>
-              </div>
-
-              <div class="col bordersplitter">
-                <div class="row">
-                  <h4>Elevator Media</h4>
-                  <a
-                    href="https://www.elevatormag.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Elevator Media website"
-                    >
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                  </a
-                  >
-                </div>
-                <div class="row">
-                  <p>Junior Full Stack Developer</p>
-                  <p>2020</p>
-                </div>
-                <p>
-                  Developed and deployed new platform modules using TypeScript and NestJS, 
-                  enhancing the existing media management system. Collaborated with senior 
-                  developers to implement RESTful APIs and improve application performance.
-                </p>
-                <p class="tech-tags">
-                  <strong>Technologies:</strong> TypeScript, JavaScript, Node.js, NestJS, RESTful APIs
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="item" id="professional-projects">
-            <h3>Personal Projects</h3>
-            <p class="mb-md text-muted">
-              Side projects built to explore new technologies and solve real-world problems
-            </p>
-            <div class="pad gap">
-              <div class="col bordersplitter">
-                <div class="row">
-                  <h4>My Stock Watchlist</h4>
-                  <a
-                    href="https://mystockwatchlist.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit My Stock Watchlist website"
-                    >
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                  </a
-                  >
-                </div>
-                <p>
-                  A stock market tracking application built with vanilla JavaScript. Users can create 
-                  multiple watchlists, search across 50k+ securities, and view real-time price data from 
-                  multiple financial APIs. Serves around 200 daily users with fast load times.
-                </p>
-                <p>
-                  <strong>Key Features:</strong> Multi-watchlist support with drag-and-drop organization; 
-                  fuzzy search engine; multi-provider API system (Finnhub, Polygon.io, CoinGecko) with 
-                  automatic failover; LRU caching strategy; offline functionality using IndexedDB.
-                </p>
-                <p class="tech-tags">
-                  <strong>Technologies:</strong> JavaScript ES6+, CSS3, IndexedDB, LocalStorage, 
-                  RESTful APIs, Multi-API Architecture
-                </p>
-              </div>
-
-              <div class="col bordersplitter">
-                <div class="row">
-                  <h4>Can I Ride My Motorcycle?</h4>
-                  <a
-                    href="https://caniridemymotorcycle.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Can I Ride My Motorcycle? website"
-                    >
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                  </a
-                  >
-                </div>
-                <p>
-                  A weather-focused web app that helps motorcycle riders determine if conditions are safe 
-                  for riding. Analyzes temperature, precipitation, wind speed, and road conditions to provide 
-                  safety recommendations. Built as a learning project to work with weather APIs and geolocation.
-                </p>
-                <p>
-                  <strong>Key Features:</strong> Custom safety scoring algorithm using the Beaufort Wind Scale; 
-                  automatic location detection with manual search fallback; 3-hour, daily, and weekly forecasts; 
-                  dark/light theme; secure deployment using GitHub Actions with encrypted API keys.
-                </p>
-                <p class="tech-tags">
-                  <strong>Technologies:</strong> JavaScript ES6+, CSS3, Geolocation API, 
-                  Open-Meteo Weather API, OpenWeatherMap Geocoding, GitHub Actions, CI/CD
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="item" id="academic-projects">
-            <h3>Academic Projects</h3>
-            <p class="mb-md text-muted">
-              Graduate-level projects completed during Master's program at Loyola University Chicago
-            </p>
-            <div class="pad gap">
-              <div class="col bordersplitter">
-                <div class="row">
-                  <h4>Kickstarter Prediction Model</h4>
-                  <p class="text-sm text-muted" style="margin: 0;">2021</p>
-                </div>
-                <p>
-                  Developed a machine learning model to predict Kickstarter campaign success rates with 82% accuracy. 
-                  Utilized Natural Language Processing (NLP) for sentiment analysis of campaign descriptions and 
-                  analyzed structured metadata. Built as an end-to-end pipeline project for a graduate AI course.
-                </p>
-                <p class="tech-tags">
-                  <strong>Technologies:</strong> Python, Scikit-learn, Pandas, Jupyter, NLP
-                </p>
-              </div>
-
-              <div class="col bordersplitter">
-                <div class="row">
-                  <h4>SoundClip</h4>
-                  <p class="text-sm text-muted" style="margin: 0;">2021</p>
-                </div>
-                <p>
-                  Cross-platform mobile social media application for recording and sharing audio content. 
-                  Built as a capstone project exploring audio streaming, real-time updates, and mobile 
-                  development best practices. Implemented user authentication, cloud storage integration, 
-                  and a feed-based interface for discovering and sharing audio clips.
-                </p>
-                <p>
-                  <strong>Key Features:</strong> Audio recording with real-time waveform visualization; 
-                  user profiles and follower system; feed algorithm for content discovery; cloud-based 
-                  audio storage; push notifications for engagement; offline playback support.
-                </p>
-                <p class="tech-tags">
-                  <strong>Technologies:</strong> React Native, JavaScript, Node.js, Express, MongoDB, 
-                  AWS S3, Firebase Authentication, REST APIs
-                </p>
-              </div>
-
-              <div class="col bordersplitter">
-                <div class="row">
-                  <h4>Shipper</h4>
-                  <p class="text-sm text-muted" style="margin: 0;">2020-2021</p>
-                </div>
-                <p>
-                  Full-stack logistics platform connecting shippers, carriers, and drivers in the 
-                  trucking industry. Designed to streamline freight matching and reduce empty miles 
-                  through intelligent route optimization. Featured separate interfaces for each user 
-                  type with real-time tracking, bidding system, and automated dispatch workflows.
-                </p>
-                <p>
-                  <strong>Key Features:</strong> Multi-role authentication system; real-time shipment 
-                  tracking; automated freight matching algorithm; bidding and negotiation system; 
-                  route optimization; document management; mobile-responsive dashboard for drivers.
-                </p>
-                <p class="tech-tags">
-                  <strong>Technologies:</strong> JavaScript, Node.js, Express, MongoDB, Socket.io, 
-                  HTML5, CSS3, Google Maps API, RESTful APIs
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <footer class="item" id="contact">
-            <h3>Let's Connect</h3>
-            <p class="mb-md text-muted">
-              Available for full-time opportunities, contract work, and technical consulting. 
-              Let's discuss how I can help deliver your next project.
-            </p>
-            <div class="row pad" style="justify-content: space-around">
-              <a
-                href="https://github.com/davidgubala"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub</a
-              >
-              <a
-                href="https://www.linkedin.com/in/gubala/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn</a
-              >
-              <a
-                href="https://twitter.com/gubaladavid"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Twitter</a
-              >
-              <a
-                href="mailto:david@gubala.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                >david@gubala.dev</a
-              >
-            </div>
-          </footer>
-        </div>
-      </article>
-    </main>
-  </body>
-  <script>
-    const toggleButton = document.getElementById('theme-toggle');
-    
-    // Set initial icon handled by CSS
-    if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        // No JS needed for icon toggle
-    }
-
-    toggleButton.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        // Button content update handled by CSS
-    });
-  </script>
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init(
-      'phc_wANjAdyr8WJ4zSb3Zb81QqY3nihbZggi2J2KLsW2VRy', {
-        api_host: 'https://us.i.posthog.com',
-        autocapture: true,
-        capture_pageview: true,
-        capture_pageleave: true,
-        })
-    posthog.capture('david.gubala.dev: visited');
-  </script>
 </html>
