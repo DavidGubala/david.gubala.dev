@@ -267,6 +267,106 @@ body {
     }
 }
 
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        background: #fff;
+        font-size: 11pt;
+    }
+
+    .page {
+        padding: 16px 18px;
+        max-width: none;
+        box-shadow: none;
+    }
+
+    .resume-header {
+        text-align: left;
+        margin-bottom: 12pt;
+        padding-bottom: 8pt;
+    }
+
+    .resume-header h1 {
+        font-size: 20pt;
+    }
+
+    .resume-header .title {
+        font-size: 11pt;
+    }
+
+    .contact-line {
+        justify-content: flex-start;
+        font-size: 9.5pt;
+        gap: 3pt 6pt;
+    }
+
+    .section {
+        margin-bottom: 14pt;
+    }
+
+    .section-title {
+        font-size: 12pt;
+    }
+
+    .entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2pt;
+        margin-bottom: 4pt;
+    }
+
+    .entry-right {
+        align-items: flex-start;
+        text-align: left;
+        flex-direction: row;
+        gap: 6pt;
+    }
+
+    .entry-date,
+    .entry-loc {
+        font-size: 9pt;
+    }
+
+    .entry-role {
+        font-size: 10pt;
+    }
+
+    .bullet-list {
+        padding-left: 14pt;
+    }
+
+    .bullet-list li {
+        font-size: 10pt;
+        line-height: 1.5;
+        margin-bottom: 3pt;
+    }
+
+    .tech-line {
+        font-size: 9pt;
+        padding-left: 0;
+    }
+
+    .skill-row {
+        flex-direction: column;
+        gap: 1pt;
+        margin-bottom: 4pt;
+    }
+
+    .skill-cat {
+        min-width: auto;
+        font-size: 9pt;
+    }
+
+    .skill-items {
+        font-size: 10pt;
+    }
+
+    .print-footer {
+        font-size: 9pt;
+        margin-top: 16pt;
+    }
+}
+
 /* Screen preview */
 @media screen {
     body {
