@@ -470,7 +470,7 @@ a:hover::after {
 /* Contact section */
 #contact .contact-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: var(--spacing-sm);
     padding: 0 var(--spacing-sm);
 }
@@ -660,6 +660,10 @@ a:hover::after {
 
     #contact .contact-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #contact .contact-grid--5 {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .main-nav {
